@@ -1,0 +1,118 @@
+<!--//Yunes Al Akwaa, 101245756-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /*
+      Thanks Cuneyt Celebican (2406 fall 2017) for the @media style sheet
+    */
+
+    @media (max-width: 1500px) {
+      body {
+        font-family: sans-serif;
+        font-size: 1.4em;
+        padding: 15px;
+        margin: 0px;
+      }
+      div#messages>div {
+        background: #e8e8e8;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border-bottom: 1px solid #fafafa;
+      }
+      /* div#messages>div:first-child {
+        background: #fff;
+        margin-bottom: 20px;
+        padding: 0px;
+      } */
+      div#messages>div:last-child {
+        margin-bottom: 20px;
+      }
+      #messages .message-sent {
+        background-color: #ADD8E6;
+        margin-left: 60px;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      #messages .message-received {
+        background-color: #d3d3d3;
+        margin-right: 60px;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      #messages .private-message-sent {
+        background-color: #fa787c;
+        color: #000000;
+        margin-left: 60px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 2px solid #f0f0f0;
+      }
+      #messages .private-message-received {
+        background-color: #fa787c; 
+        color: #000000; 
+        margin-right: 60px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 2px solid #f0f0f0;
+      }
+      input#msgBox {
+        width: -webkit-calc(100% - 24px);
+        width: -moz-calc(100% - 24px);
+        width: calc(100% - 24px);
+        display: none;
+        padding: 10px;
+      }
+      input[type="button"] {
+        display: none;
+        width: 100%;
+        margin-top: 10px;
+        background: #0a86e6;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 10px 5px;
+      }
+      #connect_as_button {
+        display: block;
+        width: 100%;
+      }
+      #usernameInput {
+        width: -webkit-calc(100% - 24px);
+        width: -moz-calc(100% - 24px);
+        width: calc(100% - 24px);
+        display: block;
+        padding: 10px;
+      }
+      #error {
+        display: none;
+      }
+      #clear_button {
+        background: #0a86e6;
+      }
+
+    }
+  </style>
+</head>
+<body>
+  <p1>Messages:</p1>
+  <br>
+
+  <p1 id = 'test'>Enter a username to begin chating!</p1>
+  <input type = 'text' placeholder = "Enter Your Name" id = 'usernameInput'>
+  <input type = 'button' id = 'connect_as_button' value = 'Connect As'>
+  <div id = 'error'>INVALID USERNAME:<br>"Only user names that start with a letter and have only letters and numbers should be accepted as valid user names" </div>
+    <div id='messages'></div>   
+    <!--<div id='connected'></div>-->
+    <input type='text' placeholder='Send a message' id='msgBox'>
+    <input type='button' id="send_button" value='Send'>    
+    <input type='button' id="clear_button" value='CLEAR'>
+
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src='chatClient.js'></script>
+</body>
+</html>
