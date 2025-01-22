@@ -1,5 +1,5 @@
 # Chat-Website
-Technologies: JavaScript, HTML, Node.js, Socket.IO, CSS
+Technologies: JavaScript, HTML, Node.js, Socket.IO
 
 # Chat Application Documentation
 
